@@ -12,7 +12,14 @@ class Cricket_Tournament(Tournament):
         self.team=team
         self.type=type
     def detail(self):
-        return f"Cricket Tournament Name: {super().get_name}\nNumber of teams:{self.team}\nType:{self.type}"
+        return f"Cricket Tournament Name: {super().get_name()}\nNumber of teams:{self.team}\nType:{self.type}"
+
+class Tennis_Tournament(Tournament):
+    def __init__(self,name,players):
+        super().__init__(name)
+        self.players=players
+    def detail(self):
+        return f"Tennis Tournament Name: {super().get_name()}\nNumber of Players:{self.players}"
 
 ct1 = Cricket_Tournament()
 print(ct1.detail())
