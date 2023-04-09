@@ -17,6 +17,15 @@ class Vehicle2010(Vehicle):
     def moveLowerLeft(self):
         super().moveDown()
         super().moveLeft()
+    def moveLowerRight(self):
+        super().moveDown()
+        super().moveRight()
+    def moveUpperLeft(self):
+        super().moveUp()
+        super().moveLeft()
+    def moveUpperRight(self):
+        super().moveUp()
+        super().moveRight()
     def equals(self,car):
         if self.x==car.x and self.y==car.y:
             return True
